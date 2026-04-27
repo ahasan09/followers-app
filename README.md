@@ -1,27 +1,56 @@
-# PracticeOne
+# GitHub Followers App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.
+An Angular application that displays GitHub user profiles and their followers, integrated with Firebase for data persistence.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Browse GitHub user profiles
+- View followers and following lists
+- GitHub profile details (avatar, repos, location, bio)
+- Firebase integration for caching/storing data
 
-## Code scaffolding
+## Tech Stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular (CLI v1.6.4)
+- TypeScript
+- Firebase / AngularFire2
 
-## Build
+## Prerequisites
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+- [Node.js](https://nodejs.org/) v10+
+- Angular CLI: `npm install -g @angular/cli`
 
-## Running unit tests
+## Getting Started
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+git clone https://github.com/ahasan09/followers-app
+cd followers-app
+npm install
+ng serve
+```
 
-## Running end-to-end tests
+Open [http://localhost:4200](http://localhost:4200).
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Commands
 
-## Further help
+| Command | Description |
+|---------|-------------|
+| `ng serve` | Start dev server on port 4200 |
+| `ng build --prod` | Production build to `dist/` |
+| `node server.js` | Serve production build with Express |
+| `ng test` | Run unit tests (Karma) |
+| `ng e2e` | Run end-to-end tests (Protractor) |
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Project Structure
+
+```
+src/app/
+├── github-followers/   # Followers list component
+├── github-profile/     # Profile detail component
+├── home/               # Home page
+├── navbar/             # Navigation bar
+├── posts/              # Posts feature
+├── change-password/    # Change password feature
+├── common/             # Shared utilities
+└── services/           # HTTP and data services
+```

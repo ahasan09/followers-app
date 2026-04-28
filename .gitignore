@@ -41,3 +41,19 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Environment local config (contains API keys)
+src/environments/environment.local.ts
+.env
+.env.local
+.env.*.local
+
+# Angular cache
+.angular/
+
+# Playwright
+/playwright-report/
+/test-results/
+
+# Coverage
+/coverage/

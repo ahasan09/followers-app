@@ -2,6 +2,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'app-github-profile',
   templateUrl: './github-profile.component.html',
   styleUrls: ['./github-profile.component.css']

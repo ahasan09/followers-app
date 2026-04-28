@@ -1,51 +1,43 @@
 import { AppError } from './../common/app-error';
-import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { NotFoundError } from '../common/not-found-error';
 import { BadInput } from '../common/bad-input';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/observable/throw';
 
-@Injectable()
 export class DataService {
-  constructor(private url: string, private http: Http) { }
+  constructor(private url: string, private http: HttpClient) { }
 
-  getAll() {
-    return this.http.get(this.url)
-        .map(response => response.json())
-        .catch(this.handleError);
+  getAll<T>(): Observable<T[]> {
+    return this.http.get<T[]>(this.url)
+        .pipe(catchError(error => this.handleError(error)));
   }
 
-  create(resource) {
-    return this.http.post(this.url, resource)
-        .map(response => response.json())
-        .catch(this.handleError);
+  create<T>(resource: T): Observable<T> {
+    return this.http.post<T>(this.url, resource)
+        .pipe(catchError(error => this.handleError(error)));
   }
 
-  update(resource) {
-    return this.http.patch(this.url + '/' + resource.id, {title: 'data updated'})
-        .map(response => response.json())
-        .catch(this.handleError);
+  update<T>(resource: { id: number | string }): Observable<T> {
+    return this.http.patch<T>(this.url + '/' + resource.id, { title: 'data updated' })
+        .pipe(catchError(error => this.handleError(error)));
   }
 
-  delete(id) {
-    return this.http.delete(this.url + '/' + id)
-        .map(response => response.json())
-        .catch(this.handleError);
+  delete<T>(id: number | string): Observable<T> {
+    return this.http.delete<T>(this.url + '/' + id)
+        .pipe(catchError(error => this.handleError(error)));
   }
 
-  private handleError(error: Response) {
+  private handleError(error: HttpErrorResponse): Observable<never> {
     if (error.status === 400) {
-        return Observable.throw(new BadInput(error.json()));
+        return throwError(() => new BadInput(error.error));
     }
 
     if (error.status === 404) {
-      return Observable.throw(new NotFoundError());
+      return throwError(() => new NotFoundError());
     }
 
-      return Observable.throw(new AppError(error));
+    return throwError(() => new AppError(error));
   }
-
 }
+

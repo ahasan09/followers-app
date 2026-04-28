@@ -1,36 +1,43 @@
 import { ActivatedRoute } from '@angular/router';
 import { GithubFollowersService } from './../services/github-followers.service';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/combineLatest'
-import 'rxjs/add/operator/map'
-import 'rxjs/add/operator/switchMap'
+import { combineLatest } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+import { GitHubFollower } from '../models/github.model';
 
 @Component({
-  // tslint:disable-next-line:component-selector
-  selector: 'github-followers',
+  standalone: false,
+  selector: 'app-github-followers',
   templateUrl: './github-followers.component.html',
   styleUrls: ['./github-followers.component.css']
 })
 export class GithubFollowersComponent implements OnInit {
-  followers: any[];
+  followers: GitHubFollower[] = [];
+  isLoading = false;
+  errorMessage = '';
 
   constructor(
     private route: ActivatedRoute,
     private service: GithubFollowersService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.isLoading = true;
 
-    Observable.combineLatest([
+    combineLatest([
       this.route.paramMap,
       this.route.queryParamMap
-    ])
-    .switchMap(combined => {
-      const id = combined[0].get('id');
-      const page = combined[1].get('page');
-      return this.service.getAll();
-    })
-    .subscribe(followers => this.followers = followers);
+    ]).pipe(
+      switchMap(() => this.service.getAll<GitHubFollower>())
+    ).subscribe({
+      next: (followers) => {
+        this.followers = followers;
+        this.isLoading = false;
+      },
+      error: (err) => {
+        this.errorMessage = err.message || 'Failed to load followers';
+        this.isLoading = false;
+        console.error('Error loading followers:', err);
+      }
+    });
   }
-
 }

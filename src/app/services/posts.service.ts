@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { DataService } from './data.service';
 
 @Injectable()
 export class PostsService extends DataService {
-  constructor(http: Http) {
-    super('http://jsonplaceholder.typicode.com/posts', http);
+  constructor(http: HttpClient) {
+    super('https://jsonplaceholder.typicode.com/posts', http);
    }
 }

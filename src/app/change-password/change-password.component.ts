@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import {FormGroup, FormBuilder, Validators } from '@angular/forms'
 
 @Component({
-  // tslint:disable-next-line:component-selector
-  selector: 'change-password',
+  standalone: false,
+  selector: 'app-change-password',
   templateUrl: './change-password.component.html',
   styleUrls: ['./change-password.component.css']
 })

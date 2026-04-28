@@ -2,8 +2,8 @@ import { GithubFollowersComponent } from './github-followers/github-followers.co
 import { AppErrorHandler } from './common/app-error-handler';
 import { PostsService } from './services/posts.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, ErrorHandler, Component } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { NgModule, ErrorHandler } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -32,7 +32,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path: '',

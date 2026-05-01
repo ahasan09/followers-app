@@ -1,0 +1,26 @@
+
+> angular-for-busy-developer@1.0.0 build
+> ng build
+
+Node.js version v25.9.0 detected.
+Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/previous-releases/.
+❯ Building...
+✔ Building...
+Initial chunk files   | Names         |  Raw size | Estimated transfer size
+main-6VMKJIOA.js      | main          | 254.49 kB |                67.62 kB
+styles-2TI5DBQF.css   | styles        | 232.51 kB |                22.80 kB
+polyfills-B6TNHZQ6.js | polyfills     |  34.58 kB |                11.32 kB
+
+                      | Initial total | 521.58 kB |               101.74 kB
+
+Application bundle generation complete. [1.661 seconds]
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1m4 rules skipped due to selector errors:
+  .form-floating>~label -> Did not expect successive traversals.
+  .btn-group>+.btn -> Did not expect successive traversals.
+  .btn-group>+.btn -> Did not expect successive traversals.
+  .btn-group-vertical>+.btn -> Did not expect successive traversals.[0m
+
+
+Output location: /Users/abulhasan/Desktop/Programming/Github_Projects/followers-app/dist/angular-for-busy-developer
+

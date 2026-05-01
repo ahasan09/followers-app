@@ -1,0 +1,38 @@
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: @angular-eslint/eslint-plugin@19.8.1
+npm error Found: @typescript-eslint/utils@6.21.0
+npm error node_modules/@typescript-eslint/utils
+npm error   @typescript-eslint/utils@"6.21.0" from @typescript-eslint/eslint-plugin@6.21.0
+npm error   node_modules/@typescript-eslint/eslint-plugin
+npm error     dev @typescript-eslint/eslint-plugin@"^6.0.0" from the root project
+npm error   @typescript-eslint/utils@"6.21.0" from @typescript-eslint/type-utils@6.21.0
+npm error   node_modules/@typescript-eslint/type-utils
+npm error     @typescript-eslint/type-utils@"6.21.0" from @typescript-eslint/eslint-plugin@6.21.0
+npm error     node_modules/@typescript-eslint/eslint-plugin
+npm error       dev @typescript-eslint/eslint-plugin@"^6.0.0" from the root project
+npm error
+npm error Could not resolve dependency:
+npm error peer @typescript-eslint/utils@"^7.11.0 || ^8.0.0" from @angular-eslint/eslint-plugin@19.8.1
+npm error node_modules/@angular-eslint/eslint-plugin
+npm error   dev @angular-eslint/eslint-plugin@"^19.0.0" from the root project
+npm error   @angular-eslint/eslint-plugin@"19.8.1" from @angular-eslint/schematics@19.8.1
+npm error   node_modules/@angular-eslint/schematics
+npm error     dev @angular-eslint/schematics@"^19.0.0" from the root project
+npm error
+npm error Conflicting peer dependency: @typescript-eslint/utils@8.59.1
+npm error node_modules/@typescript-eslint/utils
+npm error   peer @typescript-eslint/utils@"^7.11.0 || ^8.0.0" from @angular-eslint/eslint-plugin@19.8.1
+npm error   node_modules/@angular-eslint/eslint-plugin
+npm error     dev @angular-eslint/eslint-plugin@"^19.0.0" from the root project
+npm error     @angular-eslint/eslint-plugin@"19.8.1" from @angular-eslint/schematics@19.8.1
+npm error     node_modules/@angular-eslint/schematics
+npm error       dev @angular-eslint/schematics@"^19.0.0" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry this command with --force or --legacy-peer-deps to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error /Users/abulhasan/.npm/_logs/2026-04-28T19_10_34_292Z-eresolve-report.txt
+npm error A complete log of this run can be found in: /Users/abulhasan/.npm/_logs/2026-04-28T19_10_34_292Z-debug-0.log

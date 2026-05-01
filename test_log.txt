@@ -1,0 +1,109 @@
+
+> angular-for-busy-developer@1.0.0 test
+> ng test --watch=false --browsers=ChromeHeadless
+
+Node.js version v25.9.0 detected.
+Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/previous-releases/.
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+
+./src/app/app.component.spec.ts:4:13-18 - Error: export 'async' (imported as 'async') was not found in '@angular/core/testing' (possible exports: ComponentFixture, ComponentFixtureAutoDetect, ComponentFixtureNoNgZone, DeferBlockBehavior, DeferBlockFixture, DeferBlockState, InjectSetupWrapper, TestBed, TestComponentRenderer, __core_private_testing_placeholder__, discardPeriodicTasks, fakeAsync, flush, flushMicrotasks, getTestBed, inject, resetFakeAsyncZone, tick, waitForAsync, withModule, ɵFakeNavigation, ɵLog, ɵMetadataOverrider)
+
+./src/app/app.component.spec.ts:9:30-35 - Error: export 'async' (imported as 'async') was not found in '@angular/core/testing' (possible exports: ComponentFixture, ComponentFixtureAutoDetect, ComponentFixtureNoNgZone, DeferBlockBehavior, DeferBlockFixture, DeferBlockState, InjectSetupWrapper, TestBed, TestComponentRenderer, __core_private_testing_placeholder__, discardPeriodicTasks, fakeAsync, flush, flushMicrotasks, getTestBed, inject, resetFakeAsyncZone, tick, waitForAsync, withModule, ɵFakeNavigation, ɵLog, ɵMetadataOverrider)
+
+./src/app/app.component.spec.ts:14:35-40 - Error: export 'async' (imported as 'async') was not found in '@angular/core/testing' (possible exports: ComponentFixture, ComponentFixtureAutoDetect, ComponentFixtureNoNgZone, DeferBlockBehavior, DeferBlockFixture, DeferBlockState, InjectSetupWrapper, TestBed, TestComponentRenderer, __core_private_testing_placeholder__, discardPeriodicTasks, fakeAsync, flush, flushMicrotasks, getTestBed, inject, resetFakeAsyncZone, tick, waitForAsync, withModule, ɵFakeNavigation, ɵLog, ɵMetadataOverrider)
+
+./src/app/app.component.spec.ts:19:40-45 - Error: export 'async' (imported as 'async') was not found in '@angular/core/testing' (possible exports: ComponentFixture, ComponentFixtureAutoDetect, ComponentFixtureNoNgZone, DeferBlockBehavior, DeferBlockFixture, DeferBlockState, InjectSetupWrapper, TestBed, TestComponentRenderer, __core_private_testing_placeholder__, discardPeriodicTasks, fakeAsync, flush, flushMicrotasks, getTestBed, inject, resetFakeAsyncZone, tick, waitForAsync, withModule, ɵFakeNavigation, ɵLog, ɵMetadataOverrider)
+
+./src/app/github-profile/github-profile.component.spec.ts:6:13-18 - Error: export 'async' (imported as 'async') was not found in '@angular/core/testing' (possible exports: ComponentFixture, ComponentFixtureAutoDetect, ComponentFixtureNoNgZone, DeferBlockBehavior, DeferBlockFixture, DeferBlockState, InjectSetupWrapper, TestBed, TestComponentRenderer, __core_private_testing_placeholder__, discardPeriodicTasks, fakeAsync, flush, flushMicrotasks, getTestBed, inject, resetFakeAsyncZone, tick, waitForAsync, withModule, ɵFakeNavigation, ɵLog, ɵMetadataOverrider)
+
+./src/app/home/home.component.spec.ts:6:13-18 - Error: export 'async' (imported as 'async') was not found in '@angular/core/testing' (possible exports: ComponentFixture, ComponentFixtureAutoDetect, ComponentFixtureNoNgZone, DeferBlockBehavior, DeferBlockFixture, DeferBlockState, InjectSetupWrapper, TestBed, TestComponentRenderer, __core_private_testing_placeholder__, discardPeriodicTasks, fakeAsync, flush, flushMicrotasks, getTestBed, inject, resetFakeAsyncZone, tick, waitForAsync, withModule, ɵFakeNavigation, ɵLog, ɵMetadataOverrider)
+
+./src/app/navbar/navbar.component.spec.ts:6:13-18 - Error: export 'async' (imported as 'async') was not found in '@angular/core/testing' (possible exports: ComponentFixture, ComponentFixtureAutoDetect, ComponentFixtureNoNgZone, DeferBlockBehavior, DeferBlockFixture, DeferBlockState, InjectSetupWrapper, TestBed, TestComponentRenderer, __core_private_testing_placeholder__, discardPeriodicTasks, fakeAsync, flush, flushMicrotasks, getTestBed, inject, resetFakeAsyncZone, tick, waitForAsync, withModule, ɵFakeNavigation, ɵLog, ɵMetadataOverrider)
+
+./src/app/not-found/not-found.component.spec.ts:6:13-18 - Error: export 'async' (imported as 'async') was not found in '@angular/core/testing' (possible exports: ComponentFixture, ComponentFixtureAutoDetect, ComponentFixtureNoNgZone, DeferBlockBehavior, DeferBlockFixture, DeferBlockState, InjectSetupWrapper, TestBed, TestComponentRenderer, __core_private_testing_placeholder__, discardPeriodicTasks, fakeAsync, flush, flushMicrotasks, getTestBed, inject, resetFakeAsyncZone, tick, waitForAsync, withModule, ɵFakeNavigation, ɵLog, ɵMetadataOverrider)
+
+Error: [96msrc/app/app.component.spec.ts[0m:[93m1[0m:[93m19[0m - [91merror[0m[90m TS2305: [0mModule '"@angular/core/testing"' has no exported member 'async'.
+
+[7m1[0m import { TestBed, async } from '@angular/core/testing';
+[7m [0m [91m                  ~~~~~[0m
+
+
+Error: [96msrc/app/github-profile/github-profile.component.spec.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@angular/core/testing"' has no exported member 'async'.
+
+[7m1[0m import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+[7m [0m [91m         ~~~~~[0m
+
+
+Error: [96msrc/app/home/home.component.spec.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@angular/core/testing"' has no exported member 'async'.
+
+[7m1[0m import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+[7m [0m [91m         ~~~~~[0m
+
+
+Error: [96msrc/app/navbar/navbar.component.spec.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@angular/core/testing"' has no exported member 'async'.
+
+[7m1[0m import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+[7m [0m [91m         ~~~~~[0m
+
+
+Error: [96msrc/app/not-found/not-found.component.spec.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@angular/core/testing"' has no exported member 'async'.
+
+[7m1[0m import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+[7m [0m [91m         ~~~~~[0m
+
+
+Error: [96msrc/app/services/github.service.spec.ts[0m:[93m202[0m:[93m17[0m - [91merror[0m[90m TS2339: [0mProperty 'url' does not exist on type 'TestRequest'.
+
+[7m202[0m         if (req.url.includes('/users/')) {
+[7m   [0m [91m                ~~~[0m
+
+
+Error: [96msrc/app/services/github.service.spec.ts[0m:[93m204[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'url' does not exist on type 'TestRequest'.
+
+[7m204[0m         } else if (req.url.includes('/followers')) {
+[7m   [0m [91m                       ~~~[0m
+
+
+Error: [96msrc/app/services/github.service.ts[0m:[93m41[0m:[93m17[0m - [91merror[0m[90m TS6133: [0m'error' is declared but its value is never read.
+
+[7m41[0m         delay: (error, retryCount) => {
+[7m  [0m [91m                ~~~~~[0m
+
+
+Error: [96msrc/app/services/github.service.ts[0m:[93m70[0m:[93m17[0m - [91merror[0m[90m TS6133: [0m'error' is declared but its value is never read.
+
+[7m70[0m         delay: (error, retryCount) => {
+[7m  [0m [91m                ~~~~~[0m
+
+
+Error: [96msrc/app/services/github.service.ts[0m:[93m94[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'Observable<GitHubRepository[]>' is not assignable to type 'Observable<PaginatedResponse<GitHubRepository>>'.
+  Type 'GitHubRepository[]' is missing the following properties from type 'PaginatedResponse<GitHubRepository>': data, pagination
+
+[7m94[0m     return this.http.get<GitHubRepository[]>(url, {
+[7m  [0m [91m    ~~~~~~[0m
+
+
+Error: [96msrc/app/services/github.service.ts[0m:[93m115[0m:[93m11[0m - [91merror[0m[90m TS6133: [0m'page1' is declared but its value is never read.
+
+[7m115[0m       let page1 = 1;
+[7m   [0m [91m          ~~~~~[0m
+
+
+Error: [96msrc/app/services/github.service.ts[0m:[93m116[0m:[93m11[0m - [91merror[0m[90m TS6133: [0m'page2' is declared but its value is never read.
+
+[7m116[0m       let page2 = 1;
+[7m   [0m [91m          ~~~~~[0m
+
+
+
+[32m29 04 2026 01:10:01.665:INFO [karma-server]: [39mKarma v6.4.4 server started at http://localhost:9876/
+[32m29 04 2026 01:10:01.666:INFO [launcher]: [39mLaunching browsers ChromeHeadless with concurrency unlimited
+[91m29 04 2026 01:10:01.666:ERROR [karma-server]: [39mError: Found 1 load error
+    at Server.<anonymous> (/Users/abulhasan/Desktop/Programming/Github_Projects/followers-app/node_modules/karma/lib/server.js:243:26)
+    at Object.onceWrapper (node:events:630:28)
+    at Server.emit (node:events:521:24)
+    at emitListeningNT (node:net:2051:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.

@@ -1,0 +1,44 @@
+
+> angular-for-busy-developer@1.0.0 test
+> ng test --watch=false --browsers=ChromeHeadless
+
+Node.js version v25.9.0 detected.
+Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/previous-releases/.
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+[32m29 04 2026 01:13:56.259:INFO [karma-server]: [39mKarma v6.4.4 server started at http://localhost:9876/
+[32m29 04 2026 01:13:56.259:INFO [launcher]: [39mLaunching browsers ChromeHeadless with concurrency unlimited
+[32m29 04 2026 01:13:56.261:INFO [launcher]: [39mStarting browser ChromeHeadless
+[32m29 04 2026 01:13:57.333:INFO [Chrome Headless 147.0.0.0 (Mac OS 10.15.7)]: [39mConnected on socket xXnbs0NfiWwCvAb5AAAB with id 78963007
+Chrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 0 of 15[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 1 of 15[32m SUCCESS[39m (0 secs / 0.016 secs)
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 2 of 15[32m SUCCESS[39m (0 secs / 0.017 secs)
+[1A[2KLOG: [36m'1'[39m
+Chrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 2 of 15[32m SUCCESS[39m (0 secs / 0.017 secs)
+LOG: '1'
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 3 of 15[32m SUCCESS[39m (0 secs / 0.022 secs)
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 4 of 15[32m SUCCESS[39m (0 secs / 0.024 secs)
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 5 of 15[32m SUCCESS[39m (0 secs / 0.027 secs)
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 6 of 15[32m SUCCESS[39m (0 secs / 0.028 secs)
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 7 of 15[32m SUCCESS[39m (0 secs / 0.03 secs)
+[1A[2KERROR: [36m'GitHub API error:', Object{code: 'HTTP_403', message: 'Rate limit exceeded or access forbidden.', statusCode: 403, details: Object{message: 'API rate limit exceeded'}}[39m
+Chrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 7 of 15[32m SUCCESS[39m (0 secs / 0.03 secs)
+ERROR: 'GitHub API error:', Object{code: 'HTTP_403', message: 'Rate limit exceeded or access forbidden.', statusCode: 403, details: Object{message: 'API rate limit exceeded'}}
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 8 of 15[32m SUCCESS[39m (0 secs / 0.03 secs)
+[1A[2KERROR: [36m'GitHub API error:', Object{code: 'HTTP_404', message: 'User not found.', statusCode: 404, details: Object{message: 'Not Found'}}[39m
+Chrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 8 of 15[32m SUCCESS[39m (0 secs / 0.03 secs)
+ERROR: 'GitHub API error:', Object{code: 'HTTP_404', message: 'User not found.', statusCode: 404, details: Object{message: 'Not Found'}}
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 9 of 15[32m SUCCESS[39m (0 secs / 0.031 secs)
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 10 of 15[32m SUCCESS[39m (0 secs / 0.032 secs)
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 11 of 15[32m SUCCESS[39m (0 secs / 0.032 secs)
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 12 of 15[32m SUCCESS[39m (0 secs / 0.033 secs)
+[1A[2KWARN: [36m'Spec 'GitHubService getFollowers should handle pagination parameters correctly' has no expectations.'[39m
+Chrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 12 of 15[32m SUCCESS[39m (0 secs / 0.033 secs)
+WARN: 'Spec 'GitHubService getFollowers should handle pagination parameters correctly' has no expectations.'
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 13 of 15[32m SUCCESS[39m (0 secs / 0.033 secs)
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 14 of 15[32m SUCCESS[39m (0 secs / 0.034 secs)
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 15 of 15[32m SUCCESS[39m (0 secs / 0.035 secs)
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 15 of 15[32m SUCCESS[39m (0.04 secs / 0.035 secs)
+[32mTOTAL: 15 SUCCESS[39m
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.

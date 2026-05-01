@@ -1,0 +1,47 @@
+
+> angular-for-busy-developer@1.0.0 test
+> ng test --watch=false --browsers=ChromeHeadless
+
+Node.js version v25.9.0 detected.
+Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/previous-releases/.
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+[32m29 04 2026 01:11:16.101:INFO [karma-server]: [39mKarma v6.4.4 server started at http://localhost:9876/
+[32m29 04 2026 01:11:16.102:INFO [launcher]: [39mLaunching browsers ChromeHeadless with concurrency unlimited
+[32m29 04 2026 01:11:16.105:INFO [launcher]: [39mStarting browser ChromeHeadless
+[32m29 04 2026 01:11:17.171:INFO [Chrome Headless 147.0.0.0 (Mac OS 10.15.7)]: [39mConnected on socket 0Kp-nbCDJKa9RRmFAAAB with id 9227376
+Chrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2K[31mChrome Headless 147.0.0.0 (Mac OS 10.15.7) ERROR[39m
+  An error was thrown in afterAll
+  Uncaught ReferenceError: __decorate is not defined
+  ReferenceError: __decorate is not defined
+      at Object.92 (http://localhost:9876/_karma_webpack_/webpack:/src/app/app.component.ts:9:14)
+      at __webpack_require__ (http://localhost:9876/_karma_webpack_/webpack:/webpack/bootstrap:25:1)
+      at Object.1675 (http://localhost:9876/_karma_webpack_/main.js:12:72)
+      at __webpack_require__ (http://localhost:9876/_karma_webpack_/webpack:/webpack/bootstrap:25:1)
+      at __webpack_exec__ (http://localhost:9876/_karma_webpack_/main.js:1014:48)
+      at http://localhost:9876/_karma_webpack_/main.js:1015:102
+      at __webpack_require__.O (http://localhost:9876/_karma_webpack_/webpack:/webpack/runtime/chunk loaded:23:1)
+      at http://localhost:9876/_karma_webpack_/main.js:1016:56
+      at webpackJsonpCallback (http://localhost:9876/_karma_webpack_/webpack:/webpack/runtime/jsonp chunk loading:34:1)
+      at http://localhost:9876/_karma_webpack_/main.js:1:105
+Chrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 0 of 0[31m ERROR[39m (0 secs / 0 secs)
+Chrome Headless 147.0.0.0 (Mac OS 10.15.7) ERROR
+  An error was thrown in afterAll
+  Uncaught ReferenceError: __decorate is not defined
+  ReferenceError: __decorate is not defined
+      at Object.92 (http://localhost:9876/_karma_webpack_/webpack:/src/app/app.component.ts:9:14)
+      at __webpack_require__ (http://localhost:9876/_karma_webpack_/webpack:/webpack/bootstrap:25:1)
+      at Object.1675 (http://localhost:9876/_karma_webpack_/main.js:12:72)
+      at __webpack_require__ (http://localhost:9876/_karma_webpack_/webpack:/webpack/bootstrap:25:1)
+      at __webpack_exec__ (http://localhost:9876/_karma_webpack_/main.js:1014:48)
+      at http://localhost:9876/_karma_webpack_/main.js:1015:102
+      at __webpack_require__.O (http://localhost:9876/_karma_webpack_/webpack:/webpack/runtime/chunk loaded:23:1)
+      at http://localhost:9876/_karma_webpack_/main.js:1016:56
+      at webpackJsonpCallback (http://localhost:9876/_karma_webpack_/webpack:/webpack/runtime/jsonp chunk loading:34:1)
+      at http://localhost:9876/_karma_webpack_/main.js:1:105
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 0 of 0[31m ERROR[39m (0.002 secs / 0 secs)
+[1A[2KChrome Headless 147.0.0.0 (Mac OS 10.15.7): Executed 0 of 0[31m ERROR[39m (0.002 secs / 0 secs)
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.

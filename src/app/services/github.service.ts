@@ -38,7 +38,7 @@ export class GitHubService {
       timeout(this.REQUEST_TIMEOUT),
       retry({
         count: this.MAX_RETRIES,
-        delay: (error, retryCount) => {
+        delay: (_error, retryCount) => {
           console.warn(`Retry attempt ${retryCount} for user ${username}`);
           return timer(Math.pow(2, retryCount) * 1000);
         }
@@ -67,7 +67,7 @@ export class GitHubService {
       timeout(this.REQUEST_TIMEOUT),
       retry({
         count: this.MAX_RETRIES,
-        delay: (error, retryCount) => {
+        delay: (_error, retryCount) => {
           console.warn(`Retry attempt ${retryCount} for followers`);
           return timer(Math.pow(2, retryCount) * 1000);
         }
@@ -96,6 +96,7 @@ export class GitHubService {
       params
     }).pipe(
       timeout(this.REQUEST_TIMEOUT),
+      map(data => this.buildPaginatedResponse(data, pagination)),
       catchError(error => this.handleError(error))
     );
   }
@@ -112,8 +113,6 @@ export class GitHubService {
       let user2: GitHubUser;
       let followers1: GitHubFollower[] = [];
       let followers2: GitHubFollower[] = [];
-      let page1 = 1;
-      let page2 = 1;
       const perPage = 100;
 
       // Fetch first user

@@ -45,6 +45,9 @@ describe('GitHubService', () => {
 
     service = TestBed.inject(GitHubService);
     httpMock = TestBed.inject(HttpTestingController);
+
+    // Keep error-path tests deterministic and avoid retry delays in unit tests.
+    (service as any).MAX_RETRIES = 0;
   });
 
   afterEach(() => {
@@ -192,21 +195,21 @@ describe('GitHubService', () => {
       service.compareFollowers('user1', 'user2').subscribe(comparison => {
         expect(comparison.user1.login).toBe('octocat');
         expect(comparison.user2.login).toBe('octocat');
+        expect(comparison.commonFollowers.length).toBe(1);
         done();
       });
 
-      // Multiple requests will be made for this operation
-      let requestCount = 0;
-      httpMock.match(() => true).forEach(req => {
-        requestCount++;
-        if (req.url.includes('/users/')) {
-          req.flush(mockUser);
-        } else if (req.url.includes('/followers')) {
-          req.flush(mockFollowers);
-        }
-      });
+      const user1Req = httpMock.expectOne(req => req.url.includes('/users/user1'));
+      user1Req.flush(mockUser);
 
-      expect(requestCount).toBeGreaterThan(0);
+      const followers1Req = httpMock.expectOne(req => req.url.includes('/users/user1/followers'));
+      followers1Req.flush(mockFollowers);
+
+      const user2Req = httpMock.expectOne(req => req.url.includes('/users/user2'));
+      user2Req.flush(mockUser);
+
+      const followers2Req = httpMock.expectOne(req => req.url.includes('/users/user2/followers'));
+      followers2Req.flush(mockFollowers);
     });
   });
 });

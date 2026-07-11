@@ -1,6 +1,6 @@
 import { AppError } from './../common/app-error';
 import { PostsService } from './../services/posts.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { NotFoundError } from '../common/not-found-error';
 
 interface Post {
@@ -16,11 +16,11 @@ interface Post {
 })
 
 export class PostsComponent implements OnInit {
+  private service = inject(PostsService);
+
   posts: Post[] = [];
   isLoading = false;
   errorMessage = '';
-
-  constructor(private service: PostsService) { }
 
   ngOnInit(): void {
     this.isLoading = true;

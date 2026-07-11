@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { Observable, throwError, timer, of, switchMap } from 'rxjs';
 import { catchError, retry, timeout, map, tap } from 'rxjs/operators';
@@ -18,13 +18,13 @@ import {
   providedIn: 'root'
 })
 export class GitHubService {
+  private http = inject(HttpClient);
+
   private readonly apiUrl = environment.apiConfig.github.baseUrl;
   private readonly token = environment.apiConfig.github.token;
   private readonly REQUEST_TIMEOUT = 15000; // 15 seconds
   private readonly MAX_RETRIES = 2;
   private rateLimitStatus: RateLimitStatus | null = null;
-
-  constructor(private http: HttpClient) {}
 
   /**
    * Get a GitHub user by username

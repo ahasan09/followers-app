@@ -11,7 +11,7 @@ An Angular application that displays GitHub user profiles and their followers, i
 
 ## Tech Stack
 
-- Angular (CLI v1.6.4)
+- Angular (CLI 22)
 - TypeScript
 - Firebase / AngularFire2
 

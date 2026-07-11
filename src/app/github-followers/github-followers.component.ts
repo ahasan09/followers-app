@@ -1,6 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
 import { GithubFollowersService } from './../services/github-followers.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { combineLatest } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { GitHubFollower } from '../models/github.model';
@@ -12,13 +12,12 @@ import { GitHubFollower } from '../models/github.model';
   styleUrls: ['./github-followers.component.css']
 })
 export class GithubFollowersComponent implements OnInit {
+  private route = inject(ActivatedRoute);
+  private service = inject(GithubFollowersService);
+
   followers: GitHubFollower[] = [];
   isLoading = false;
   errorMessage = '';
-
-  constructor(
-    private route: ActivatedRoute,
-    private service: GithubFollowersService) { }
 
   ngOnInit(): void {
     this.isLoading = true;

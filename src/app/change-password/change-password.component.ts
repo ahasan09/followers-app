@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {FormGroup, FormBuilder, Validators } from '@angular/forms'
 
 @Component({
@@ -10,7 +10,9 @@ import {FormGroup, FormBuilder, Validators } from '@angular/forms'
 export class ChangePasswordComponent {
   form: FormGroup;
 
-  constructor(fb: FormBuilder) {
+  constructor() {
+    const fb = inject(FormBuilder);
+
     this.form = fb.group({
       oldPassword: ['', Validators.required],
       newPassword: ['', Validators.required],
